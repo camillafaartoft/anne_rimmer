@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/header.js" defer></script>
+    <script src="scripts/booking.js" defer></script>
+    <title>Booking</title>
+</head>
+<body>
+
+    <header>
+        <!-- DESKTOP HEADER -->
+        <div id="header_desktop">
+            <nav id="menu_desktop">
+                <a href="jegtilbyder.html">Jeg tilbyder</a>
+                <a href="hvemerjeg.html">Hvem er jeg?</a>
+
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+
+                <a href="portfolio.html">Portfolio</a>
+                <a class="current_page" href="booking.html">Booking & kontakt</a>
+            </nav>
+        </div>
+
+        <!-- MOBILE HEADER -->
+        <div id="header_mobile">
+            <div class="header_mobile_container">
+                <div class="tom_div"></div>
+                
+                <div class="logo_mobile">
+                    <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                </div>
+    
+                <div id="burgermenu">
+                    <img src="img/burgermenu_brun.svg" alt="burgermenu">
+                </div>
+            </div>
+
+            <nav id="menu_mobile">
+                <a href="jegtilbyder.html">Jeg tilbyder</a>
+                <a href="hvemerjeg.html">Hvem er jeg?</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a class="current_page" href="booking.html">Booking & kontakt</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="start_indhold">
+        <!-- Overskrift og introtekst -->
+        <div class="intro">
+            <h1>Booking</h1>
+            <p class="introtekst">Book din tid hos mig og få den perfekte makeup, styling og håropsætning til enhver begivenhed</p>
+        </div>
+
+        <!-- Orange og lyserød i baggrunden -->
+        <div class="booking_streg_1"></div>
+
+        <!-- Kontaktformular -->
+        <form action="/" method="GET">
+            <p class="oplysninger">Dit fulde navn</p>
+            <input id="fuldenavn" type="text" name="fulde_navn" placeholder="Fulde navn"/>
+            <span id="error-fuldenavn" class="error-message"></span>
+            
+            <p class="oplysninger">Din email</p>
+            <input id="email" type="text" name="email" placeholder="E-mail"/>
+            <span id="error-email" class="error-message"></span>
+            
+            <p class="oplysninger">Dit mobilnummer</p>
+            <input id="mobilnummer" type="text" name="mobilnummer" placeholder="Mobilnummer"/>
+            <span id="error-mobilnummer" class="error-message"></span>
+            
+            <p class="oplysninger">Dit emne</p>
+            <input id="emne" type="text" name="emne" placeholder="Emne"/>
+            <span id="error-emne" class="error-message"></span>
+            
+            <p class="oplysninger">Din forespørgsel</p>
+            <input id="foresporgsel" type="text" name="foresporgsel" placeholder="Din besked"/>
+            <span id="error-foresporgsel" class="error-message"></span>
+        
+            <p class="oplysninger" id="errorMessage" hidden></p>
+            <input type="submit" value="Send" />
+        </form>
+
+        <!-- Pop up med bekræftelse på booking -->
+        <div id="popup_booking" class="popup_booking">
+            <img src="img/booking/korrekt_booking.png" alt="Bekræftelse Billede"/>
+        </div>
+
+        <!-- Orange og lyserød i baggrunden -->
+        <div class="booking_streg_2"></div>
+
+        <!-- Kontakt -->
+        <h2 class="overskrift_kontakt">Kontakt</h2>
+        <div class="grid_booking_kontakt">
+            <!-- Kontakt på mobil og mail -->
+            <div class="booking_kontakt">
+                <h3 class="booking_overskrift">Instagram</h3>
+                <p>missrimmer</p>
+                <br>
+                <h3 class="booking_overskrift">Facebook</h3>
+                <p>Anne Margrethe Rimmer Larsen</p>
+                
+                <div class="booking_ikoner">
+                    <a href="https://www.instagram.com/missrimmer/" target="_blank"><img src="img/booking/instagram_hvid.png" alt="instagram"></a>
+                    <a href="https://www.facebook.com/anne.m.rimmer" target="_blank"><img src="img/booking/facebook_hvid.png" alt="facebook"></a>
+                </div>
+            </div>
+
+            <!-- Kontakt på Instagram og Facebook -->
+            <div class="booking_some">
+                <h3 class="booking_overskrift">Mobilnummer</h3>
+                <p class="booking_telefon" >+45 25 11 15 65</p>
+                <br>
+                <h3 class="booking_overskrift">E-mail</h3>
+                <p>annerimmer@hotmail.com</p>
+                
+                <div class="booking_ikoner">
+                    <a href="mailto:annerimmer@hotmail.com?subject=Emne%20her&body=Besked%20her">
+                        <img src="img/booking/mail_hvid.png" alt="Kontakt via mail">
+                    </a>
+                    <a href="tel:+4525111565">
+                        <img src="img/booking/telefon_hvid.png" alt="Kontakt via telefon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>    
+        <!-- Sociale Medier -->
+        <div class="footer_indhold">
+            <div class="socialemedier">
+            <a href="https://www.facebook.com/anne.m.rimmer" target="_blank"><img src="img/facebook_brun.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/missrimmer/" target="_blank"><img src="img/instagram_brun.png" alt="instagram"></a>
+            </div>
+        </div>
+     
+        <!-- CVR & Adresse -->
+        <div class="footer_indhold"> 
+            <p class="cvr">
+             CVR nr: 33092547 <br>
+            </p>
+            <div class="adresse_og_telefon">
+                <p class="adresse">
+                Langelandsgade 121, 8000 Aarhus C,
+                </p>
+                <p class="telefon_footer">
+                + 45 25 11 15 65
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

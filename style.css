@@ -1,0 +1,1905 @@
+/*-- GENERELLE REGLER FOR ALLE SIDER --*/ 
+body{
+    background-color: #ece7e1;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    color: #533f32;
+    letter-spacing: 0.8px; /*--- Mere mellemrum mellem bogstaverne ---*/ 
+    padding: 0;
+}
+
+/*--- Overskriftter ---*/ 
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+/*--- Brødtekst ---*/ 
+p {
+    font-size: 18px;
+}
+
+/*---Punktopstilling læbeikon ---*/ 
+.punktopstilling {
+    list-style: none;
+    padding: 0;
+}
+
+.punktopstilling li {
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 6%;
+    margin-bottom: 10px;
+    background: url('img/laebeikon.png') no-repeat;
+    background-position: left 50%;
+    background-size: 22px;
+    padding-top: 2px;
+}
+
+.overskrift_grid_punktopstilling {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+/*---Overskrift øverst i rosa boks ---*/ 
+.intro {
+    background-color: #c1a39e;
+    padding: 30px;
+}
+
+.introtekst {
+    text-align: center; 
+    font-size: 13pt;
+    padding: 0px 20%;
+}
+
+/*---HEADER---*/ 
+header {
+    position: sticky; /*fastgør header så den altid følger med*/
+    top: 0;
+    width: 100%; /*fylder 100% af billedet i viden*/
+    z-index: 1000;
+}
+
+#header_mobile {
+    display: none; /* vises ikke*/
+}
+
+#header_desktop {
+    background-color: rgba(255, 255, 255, 0.7); /*farve og opacitet*/
+    width: 100%;
+    z-index: 101;
+    box-shadow: 0px 2px 15px -10px #533f32;
+}
+#menu_desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /*ligemeget mellemrum i mellem punkterne*/
+    align-items: center;
+    padding: 5px 2%;
+    padding-left: 2.5%;
+    font-size: 20px;
+}
+
+#menu_desktop img {
+    width: 170px;
+    padding-top: 15px;
+}
+
+#menu_desktop a {
+    text-decoration: none;
+    color: #533f32;
+    padding: 0 2%;
+}
+
+#menu_desktop a:hover {
+    text-decoration: underline;
+}
+
+#menu_desktop a.current_page {
+    text-decoration: underline; /*underline på det menupunkt brugeren befinder sig på*/
+}
+
+
+/*--FORSIDE--*/
+/*--Video--*/
+#video {
+    height: auto;
+    width: 100%; /*fylder  100% af skærmens vide*/
+    margin-top: -107px;
+}
+
+/*--Introafsnit--*/
+.intro_afsnit {
+    display: flex;
+    flex-direction: row; /*placere billede og tekst ift hinaden*/
+    padding: 5% 12%;
+    align-items: center;
+}
+
+.intro_tekst_forside {
+    padding-right: 15%;
+}
+
+.rund_billede_forside {
+    max-width: 40%;
+}
+
+.grid_forside {  
+    display: grid; /* Danner to række og kolonner med lige meget mellemrum*/
+    width: 100%;
+    background-color: #c1a39e;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "anne_ida_forside min_karriere"
+      "erhverv_privat brudepar_forside";
+}
+  
+.anne_ida_forside { 
+    grid-area: anne_ida_forside; 
+    margin: 0;
+    padding: 0;
+}
+
+.anne_ida_forside img {
+    width: 100%;
+    display: block;
+}
+  
+.min_karriere { 
+    grid-area: min_karriere; 
+    padding: 10%;
+}
+    
+.overskrift_minkarriere {
+    padding-bottom: 5%;   
+}
+
+.laesmere_hvemerjeg {
+    color: #533f32;
+    font-weight: bold;
+}
+  
+.erhverv_privat { 
+    grid-area: erhverv_privat;
+    padding: 10%;
+}
+
+.laesmere_jegtilbyder {
+    color: #533f32;
+    font-weight: bold;
+}
+  
+.brudepar_forside { 
+    grid-area: brudepar_forside; 
+    margin: 0;
+    padding: 0;
+}
+  
+.brudepar_forside img {
+    width: 100%;
+    display: block;
+}
+
+.background_container {
+    position: relative; /* Giver containeren en fast plads på siden */
+    overflow: hidden;
+    background-image: url(img/forside/streger_forside_desktop.png);
+    background-size: cover; 
+    background-repeat: repeat;
+    background-position: center;
+    z-index: 1; /* sikre at containeren ligger ovenpåde andre elementer*/
+    height: 100%; /*fylder hele containerens størrelse*/
+}
+
+.booking_knap {
+    text-decoration: none;
+    color: #533f32;
+    border: 3px solid #533f32; /*kant*/
+    border-radius: 10px;
+    font-size: 26px; /*størrelsen på boooing bogstaver*/
+    padding: 1% 6%;
+    margin-top: 90px; 
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+.booking_knap:hover {
+    padding: 1.2% 7%;
+}
+
+/*--Anmeldelser nederst på forsiden--*/
+
+/* Anmeldesler container */
+.anmeldelser_container {
+    max-width: 100%;
+    height: 450px;
+    position: relative; /* positioners ift siden*/
+    background-color: #a5b5b2;/*baggrundsfarve*/
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 2% 25%;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    position: relative;
+}
+
+.forside_anmeldelser img {
+    justify-content: center; /*placere stjerneni midten verttkalt*/
+    align-items: center;
+    width: 20%;
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: 5%;     
+}
+.overkrift_anmeldelser {
+    padding: 0 !important;
+}
+  
+/* Anmeldelser skjules som standard */
+.forside_anmeldelser {
+    display: none;
+}
+  
+/*Tilbage og næste knap */
+.tilbage, .naeste {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px; /* placere knapperne*/
+    color: white; /* Farven på pilene skal være hvid */
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease; /*overgangseffekt*/
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position af næste knap */
+.naeste {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: 18%;
+}
+
+/* Position af tilbage knap */
+.tilbage {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    margin-left: 18%;
+}
+  
+/* Hover til tilbage og næste knap */
+.tilbage:hover, .naeste:hover {
+    font-size: 40px;
+}
+  
+/* Tekst til anmeldelser */
+.tekst_anmeldelser {
+    color: #ffffff; 
+    text-align: left; /* teten centrers til venstre*/
+    font-style: italic; /*kursiv*/
+}
+  
+/* Prikkerne nederst i anmeldelser*/
+.prik {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ffffff;
+    border-radius: 50%; /*runderde hjørner*/
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.forside_prikker {
+    position: absolute;
+    top: 85%;
+    left: 48%;
+}
+  
+.active {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s; /*animationens varighed er 1.5 sekunder*/
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.anmeldelser_fire_stjerner {
+    width: 15%;
+    margin-top: 20px;
+}
+
+.anmeldelser_fem_stjerner {
+    width: 25%;
+    margin-top: 20px;
+}
+
+.fade h3 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+/* ---JEG TILBYDER---*/
+/* ---Billeder og overskrift af de 3 kategorier; hårstyling, styling af tøj, makeup---*/
+.grid_jegtilbyder_kategorier {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*opdeler i 3 kolonner*/
+    grid-template-rows: 1fr; 
+    gap: 90px; /* mellmerum mellem rækker og kolonner*/
+    grid-auto-flow: row;
+    grid-template-areas: /*definere områderne for kategorierne*/
+      "jegtilbyder_haarstyling jegtilbyder_styling jegtilbyder_makeup";
+}
+  
+.jegtilbyder_haarstyling { grid-area: jegtilbyder_haarstyling; }
+  
+.jegtilbyder_styling { grid-area: jegtilbyder_styling; }
+  
+.jegtilbyder_makeup { grid-area: jegtilbyder_makeup; }
+
+.grid_jegtilbyder_kategorier {
+    margin: 70px 15% 110px 15%;
+}
+  
+.grid_jegtilbyder_kategorier img {
+    width: 100%;
+}
+
+/* ---Tilbud til virksomheder og private - Tekstboke, billeder og priser---*/
+/* ---Tilbud til virksomheder---*/
+.container_jegtilbyder_virksomheder_private {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    margin: 30px auto;
+    margin-top: 5%;
+}
+
+.jegtilbyder_infoboks_virksomheder, .jegtilbyder_infoboks_private {
+    background-color: #a5b5b2;
+    color: white;
+    padding: 40px;
+    width: 70%;
+    height: auto;
+}
+
+.jegtilbyder_swatch_pris_virksomheder {
+    position: absolute;
+    bottom: -35px; 
+    left: 7%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.jegtilbyder_pris_virksomheder {
+    background-image: url('img/jeg_tilbyder/jegtilbyder_swatch.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat; /*baggrundsbillede skal ikke gentages*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+    margin-right: -200px;
+    width: 200px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    color: #533f32;
+    font-size: 16px;
+    line-height: 1.2; /*linjehøjde*/
+    z-index: 5;
+}
+
+.overlappende_billede_virksomheder {
+    position: relative;
+    left: -20px;
+    width: 300px; 
+    height: auto;
+}
+
+.jegtilbyder_streg {
+    background-image: url('img/jeg_tilbyder/streger_til.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 760px; /*placere billedet fra toppen*/
+    left: 0;
+}
+
+.jegtilbyder_swatch_pris_private {
+    position: absolute;
+    bottom: -35px; 
+    left: 93%; 
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.jegtilbyder_pris_private {
+    background-image: url('img/jeg_tilbyder/jegtilbyder_swatch.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -20px;
+    margin-right: -200px;
+    width: 200px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    color: #533f32;
+    font-size: 16px;
+    line-height: 1.2;
+    z-index: 5;
+}
+
+.overlappende_billede_private {
+    position: relative;
+    left: 20px; 
+    width: 300px; 
+    height: auto;
+}
+
+.jegtilbyder_tekst {
+    font-size: 13pt;
+    padding-top: 20px;
+}
+
+/* ---Oversigt over produkter inden for makeup, hår og hudpleje---*/
+.grid_jegtilbyder_produkter {  
+    background-image: url(img/jeg_tilbyder/jegtilbyder_baggrund_desktop.jpg);
+    background-size: cover; /*billedet dækker hele elementet*/
+    background-position: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 20px 7.5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr; 
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "jegtilbyder_makeupprodukter jegtilbyder_haarprodukter jegtilbyder_hudpleje";
+}
+  
+.jegtilbyder_makeupproprivate { grid-area: jegtilbyder_makeupprodukter; }
+  
+.jegtilbyder_haarprodukter { grid-area: jegtilbyder_haarprodukter; }
+  
+.jegtilbyder_hudpleje { grid-area: jegtilbyder_hudpleje; }
+
+.jegtilbyder_bokse_opacity {   
+    background-color: rgba(236, 231, 225, 0.8); /* laver opacity */
+    padding: 5px;
+    margin: 5%;
+}
+
+.jegtilbyder_bokse_produkter {
+    background-color: #ece7e1;
+    padding: 10px 10%;
+    margin: 6%;
+    border: 4px solid #a5b5b2;
+    height: 300px;
+}
+
+.jegtilbyder_baggrundsbillede_mobile {
+    display: none;
+}
+
+/*---PORTFOLIO---*/
+/*---Streger i baggrunden, øverst--*/
+.portfolio_streg_1 {
+    background-image: url('img/portfolio/streger_1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%; /*---Fylder hele bredden--*/
+    position: absolute;
+    top: 86%; /*---Jo højere procent, jo længere procentvis nede af siden placeres stregerne--*/
+    left: 0;
+}
+
+/*---Streger i baggrunden, nederst--*/
+.portfolio_streg_2 {
+    background-image: url('img/portfolio/streger_2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%; /*---Fylder hele bredden--*/
+    position: absolute;
+    top: 330%; /*---Jo højere procent, jo længere procentvis nede af siden placeres stregerne--*/
+    left: 0;
+}
+
+/*---Overordnet grid for hele portfolio--*/
+.grid_portfolio {  
+    display: grid;
+    margin: 60px 7.5%;
+    grid-template-columns: 1fr; /*---1 kolonne af 1fr--*/
+    grid-template-rows: auto;
+    gap: 30px; /*---Tilføjer gap på 30px mellem hver grid, der er indeni denne grid--*/
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid_portfolio_foerste"
+      "grid_portfolio_anden"
+      "grid_portfolio_tredje"
+      "grid_portfolio_fjerde"
+      "grid_portfolio_femte"
+      "grid_portfolio_sjette"
+      "grid_portfolio_syvende";
+  }
+  
+  .grid_portfolio_foerste { grid-area: grid_portfolio_foerste; }
+
+  .grid_portfolio_anden { grid-area: grid_portfolio_anden; }
+  
+  .grid_portfolio_tredje { grid-area: grid_portfolio_tredje; }
+  
+  .grid_portfolio_fjerde { grid-area: grid_portfolio_fjerde; }
+  
+  .grid_portfolio_femte { grid-area: grid_portfolio_femte; }
+  
+  .grid_portfolio_sjette { grid-area: grid_portfolio_sjette; }
+  
+  .grid_portfolio_syvende { grid-area: grid_portfolio_syvende; }
+
+/* ---Portfolio, række 1---*/  
+.grid_portfolio_foerste {  
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ---2 kolonner af 1fr---*/ 
+    grid-template-rows: 1fr; /* ---1 række af 1fr---*/ 
+    gap: 30px; 
+    grid-auto-flow: row;
+    grid-template-areas:
+      "ida_lyseroed philine_yoga";
+}
+  
+.ida_lyseroed { grid-area: ida_lyseroed; }
+  
+.philine_yoga { grid-area: philine_yoga; }
+
+/* ---Portfolio, række 2---*/  
+.grid_portfolio_anden {  
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.foer_efter_tekst {
+    position: absolute;
+    text-align: center;
+    top: 40%; 
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 135px; /* bredde på lyserød boks */
+    height: 30px; /* højde på lyserød boks */
+    background-color: #c1a39e; /* Lyserød baggrundfarve på før/efter boksen */
+    padding: 15px;
+    padding-top: 5px;
+    font-size: 22px;
+    z-index: 1; /* Sørger for, at teksten ligger ovenpå billedet */
+}
+.foer_billede img, .efter_billede img {
+    max-height: 100%;
+    width: auto;
+}
+
+/* ---Portfolio, række 3---*/  
+.grid_portfolio_tredje {  
+    display: grid;
+    grid-template-columns: 1.46fr 1fr 1fr; /* 3 kolonner af 1.46fr, 1fr, 1fr */
+    grid-template-rows: 1fr; /* 1 række */
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "yoga_bagfra hvid_bh kendte_personer";
+}
+  
+.yoga_bagfra { grid-area: yoga_bagfra; }
+  
+.hvid_bh { grid-area: hvid_bh; }
+  
+.kendte_personer { grid-area: kendte_personer; }
+
+/* ---Portfolio, række 4---*/  
+.grid_portfolio_fjerde {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.45fr; /* 3 kolonner af 1fr, 1fr, 0.45fr */
+    grid-template-rows: 1fr; /* 1 række */
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "afro philine_elizabeth sort_toej";
+}
+  
+.afro { grid-area: afro; }
+  
+.philine_elizabeth { grid-area: philine_elizabeth; }
+  
+.sort_toej { grid-area: sort_toej; }
+
+/* ---Portfolio, række 5---*/  
+.grid_portfolio_femte {  
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 kolonner af 1fr */
+    grid-template-rows: 1fr; /* 1 række af 1fr */
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "virksomheder taet_paa";
+}
+  
+.virksomheder { grid-area: virksomheder; } 
+
+.taet_paa { 
+    grid-area: taet_paa; 
+}
+.taet_paa img {
+    height: 100%;
+}
+
+/* ---Portfolio, række 6---*/  
+.grid_portfolio_sjette {  
+    display: grid;
+    grid-template-columns: 1fr; /* 1 kolonne af 1fr */
+    grid-template-rows: 1fr; /* 1 række af 1fr */
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "tre_piger";
+}
+  
+.tre_piger { grid-area: tre_piger; }
+
+/* ---Portfolio, række 7---*/ 
+.grid_portfolio_syvende {  
+    display: grid;
+    grid-template-columns: 1fr 1.6fr; /* 2 kolonner af 1fr og 1.6fr */
+    grid-template-rows: 1fr; /* 1 række af 1fr */
+    gap: 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "hestehale haarklemme";
+}
+  
+.hestehale { grid-area: hestehale; } 
+
+.haarklemme { grid-area: haarklemme; }
+
+.grid_portfolio img {
+    max-width: 100%;
+}
+
+/* De to bokse omhandlende kendte personer og virksomheder */
+.kendte_personer, .virksomheder {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #c1a39e; /* Rosa baggrundsfarve */
+    height: auto;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+.punktopstilling li {
+    font-size: 15px;
+}
+/*--Portfolio overlay--*/
+/* Div'er der skal have et overlay på */
+.ida_lyseroed, .philine_yoga, .yoga_bagfra, .hvid_bh, .afro, .philine_elizabeth, .sort_toej, .taet_paa, .tre_piger, .hestehale, .haarklemme{
+    position: relative;
+}
+  
+.overlay_billede {
+    display: block;
+    width: 100%;
+}
+  
+/* Overlay effekten der kommer over billederne */
+.overlay {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(255, 255, 255);
+    background:  rgba(255, 255, 255, 0.7); 
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: #533f32;
+    font-size: 20px;
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+/* Når musen kører over billederne, fader titlen ind */
+.ida_lyseroed:hover .overlay {
+    opacity: 1;
+}
+
+.philine_yoga:hover .overlay {
+    opacity: 1;
+}
+
+.yoga_bagfra:hover .overlay {
+    opacity: 1;
+}
+
+.hvid_bh:hover .overlay {
+    opacity: 1;
+}
+
+.afro:hover .overlay {
+    opacity: 1;
+}
+
+.philine_elizabeth:hover .overlay {
+    opacity: 1;
+}
+
+.sort_toej:hover .overlay {
+    opacity: 1;
+}
+  
+.taet_paa:hover .overlay {
+    opacity: 1;
+}
+
+.tre_piger:hover .overlay {
+    opacity: 1;
+}
+
+.hestehale:hover .overlay {
+    opacity: 1;
+}
+
+.haarklemme:hover .overlay {
+    opacity: 1;
+}
+  
+/* ---HVEM ER JEG---*/
+.intro_hvemerjeg {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 12% 70px 12%;
+    align-items: center;
+}
+
+.intro_tekst_hvemerjeg {
+    padding-right: 15%;
+}
+
+.rund_billede_hvemerjeg {
+    max-width: 40%;
+}
+.streg_hvemerjeg {
+    background-image: url('img/hvem_er_jeg/pink_orange_streg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 73%; /*placeres 73% fra toppen*/
+    left: 0;
+}
+
+.grid_hvemerjeg {  
+    display: grid;
+    background-color: #c1a39e;
+    max-width: 100%;
+    padding: 60px 7.5%;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 5px;
+    grid-template-areas:
+    "som_person i_et_team kompetencer";
+}
+
+.som_person { 
+    grid-area: som_person;
+    width: 300px;
+    background-color: #ece7e1;
+    padding: 30px 5%;
+}
+
+.i_et_team { 
+    grid-area: i_et_team;
+    width: 300px;
+    background-color: #ece7e1;
+    padding: 30px 5%;
+}
+
+.kompetencer { 
+    grid-area: kompetencer;
+    width: 300px;
+    background-color: #ece7e1;
+    padding: 30px 5%;
+}
+
+.overskrift_infographic {
+    margin: 90px 0 5px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.overskrift_infographic h2 {
+    color: #ffffff;
+    background-image: url('img/hvem_er_jeg/hvemerjeg_swatch.png'); 
+    background-size: 500px; /*billedts størrelse*/
+    background-position: center;
+    background-repeat: no-repeat;
+    letter-spacing: 1px;
+    padding: 1%;
+}
+
+.vejledende_tekst {
+    font-weight: 900;
+}
+
+.infographic {  
+    display: grid;
+    background-image: url('img/hvem_er_jeg/blaastreg_hvemerjeg.png'); 
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding-bottom: 150px;
+    padding-top: 80px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*opdeler i 8 kolonner*/
+    grid-template-rows: 1fr 1fr 1fr; /*opdeler i 2 rækker*/
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr; /*iopdeler 1 rækkke*/
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "design_skole . london . . . . ."
+      ". arbejde_designer . makeup_skole cvr_grid . haarkursus_1 ."
+      ". . . . . fotograf . haarkursus_2";
+  }
+  
+.design_skole { 
+    grid-area: design_skole;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: -30px;
+    margin-right: -30px;
+}
+
+.london { 
+    grid-area: london;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: -70px;
+}
+
+.cvr_grid { 
+    grid-area: cvr_grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: -60px;
+}
+
+.haarkursus_1 { 
+    grid-area: haarkursus_1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: -70px;
+    margin-left: -50px;
+}
+
+.arbejde_designer { 
+    grid-area: arbejde_designer; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: -100px;
+    margin-bottom: -10px;
+}
+
+.makeup_skole { 
+    grid-area: makeup_skole;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: -110px;
+    margin-left: -60px;
+}
+
+.fotograf { 
+    grid-area: fotograf;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: -100px;
+    margin-left: -100px;
+}
+
+.haarkursus_2 { 
+    grid-area: haarkursus_2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*placeresi starten af containeren*/
+    align-items: center;
+    margin-bottom: -40px;
+}
+
+.infographic img {
+    max-height: 70px;
+    padding: 2%;
+}
+
+.infographic p {
+    font-size: 15px;
+}
+
+.infographic button {
+    text-decoration: none;
+    padding: 1px 2%;
+    background-color: #ece7e1;
+    color: #533f32;
+    border: 2px #a5b5b2 solid;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    letter-spacing: 1px;
+    font-size: 13px;
+    width: 100px;
+}
+
+.infographic button:hover {
+    border: 4px #a5b5b2 solid;
+}
+
+/* --- Pop-up (billederne)---*/
+#popup_2004_2006 img, #popup_2007_2009 img, #popup_2010_cvr img, #popup_2012 img, #popup_2006 img, #popup_2009_2010 img, #popup_2010_stock img, #popup_2023 img {
+    width: 50%; /*viden på ikonerne*/
+    margin-left: 25%;
+    position: absolute;
+    top: 190%;
+}
+
+/* --- Pop-up ---*/
+#popup_2004_2006, #popup_2007_2009, #popup_2010_cvr, #popup_2012, #popup_2006, #popup_2009_2010, #popup_2010_stock, #popup_2023 {
+    display: none; /*skjuler*/
+}
+
+/* --- Kryds på popup ---*/
+#kryds_2004_2006, #kryds_2007_2009, #kryds_2010_cvr, #kryds_2012, #kryds_2006, #kryds_2009_2010, #kryds_2010_stock, #kryds_2023 {
+    width: 6%;
+    height: 10%;
+    position: absolute; /*krydset placeres absolut og placers efterfølgende præcist*/
+    top: 192%;
+    left: 68%;
+    z-index: 100;
+}
+#kryds_2004_2006:hover, #kryds_2007_2009:hover, #kryds_2010_cvr:hover, #kryds_2012:hover, #kryds_2006:hover, #kryds_2009_2010:hover, #kryds_2010_stock:hover, #kryds_2023:hover {
+    cursor: pointer; /* -- Tydeligøre at man kan klikke på krydset --*/
+}
+
+
+/*BOOKING*/
+form {
+    background-color: rgb(255, 255, 255, 0.5); /*sætter en opacitet på bookingformularen*/
+    border-radius: 5px;
+    padding: 20px;
+    padding-top: 5%;
+    margin: 150px 23%;
+}
+
+.booking_streg_1 {
+    background-image: url('img/booking/streger_booking_1.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 800px;
+    width: 100%;
+    position: absolute;
+    top: 290px;
+    left: 0;
+}
+
+.booking_streg_2 {
+    background-image: url('img/booking/streger_booking_2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 1200px;
+    left: 0;
+}
+
+.oplysninger {
+    padding-left: 8%;
+}
+
+form input {
+    display: block;
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: left;
+    border: 3px solid #ffffff;
+    outline: none;
+    width: 150px;
+    font-size: 22px;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+form input[type="submit"] {
+    background-color: #c1a39e;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+form input[type=submit]:hover {
+    background-color: #b4928c;
+}
+
+input[type=text] {
+    width: 85%; /* Fuldt bredde */
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Afrundede kanter */
+    box-sizing: border-box; 
+    margin-top: 2px; /* Tilføjer en topmargin */
+    margin-bottom: 20px; /* Tilføjer en bundmargin */
+}
+
+::placeholder {
+    font-size: 11pt;
+    text-align: left;
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block; /* Gør teksten synlig */
+    margin-left: 8%;
+}
+.popup_booking {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%); /*centrere popupvinduet*/
+    background-color: white;
+    padding: 20px;
+    border: 3px solid #ccc;
+    width: 40%;
+}
+
+.popup_booking img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Kontaktoplysninger nederst på booking siden */
+.grid_booking_kontakt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 60px;
+    grid-auto-flow: row;
+    margin: 20px 23% 50px 23%;
+    text-align: center;
+    color: white;
+    grid-template-areas: "booking_some booking_kontakt";
+}
+
+.booking_some {
+    grid-area: booking_some;
+    background-color: #a5b5b2;
+    padding: 30px;
+}
+
+.booking_telefon {
+    text-decoration: none;
+    color: white;
+}
+
+.booking_kontakt {
+    grid-area: booking_kontakt;
+    background-color: #a5b5b2;
+    padding: 30px;
+}
+
+.booking_ikoner img {
+    width: 70px;
+    padding: 10px;
+}
+
+.booking_ikoner {
+    padding-top: 20px;
+}
+.booking_ikoner a {
+    text-decoration: none;
+}
+
+.booking_overskrift {
+    font-weight: bolder;
+}
+
+/*--- FOOTER --- */
+footer {
+    text-align: center;
+    background-color: #c1a39e; 
+    color: #533f32;
+    padding: 20px;
+    position: relative; 
+    z-index: 1;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+
+/*--- Sociale medier ---*/
+.socialemedier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialemedier a {
+    margin: 8px;
+    text-decoration: none; /*fjerner linjen under*/
+}
+
+/*---Ikonbilleder---*/
+.socialemedier img {
+    width: 45px; 
+    height: auto;
+    margin-bottom: 0%;
+}
+
+.adresse_og_telefon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.telefon_footer {
+    text-decoration: none;
+    color: #533f32;
+ }
+ .booking_telefon, .telefon_footer{
+     /* Forhindrer standard link-styling */
+     -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none;   /* Safari */
+     -moz-user-select: none;      /* Firefox */
+     -ms-user-select: none;       /* Internet Explorer/Edge */
+     user-select: none;           /* Ikke understøttet i Opera Mini og gamle Android browser */
+ }
+ a[href^="tel"] {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ---MEDIA MAX-WIDTH 768px - ALLE SIDER---*/
+@media screen and (max-width: 768px) {
+/*--Media max-width 768 px- Header--*/
+/* -- MOBILE HEADER -- */
+    #header_desktop {
+        display: none; /*skjules*/
+    }
+
+    #header_mobile {
+        display: block; /*vises*/
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px 2%;
+        box-shadow: 0px 2px 15px -10px #533f32; /*sætter skygge under headeren*/
+    }   
+
+    .tom_div {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header_mobile_container {
+        display: flex;
+        flex-direction: row; /*sætter menupunkterne i en række*/
+        justify-content: space-around; /*laver lige meget mellemrum mellem punkterne*/
+        align-items: center;
+    }
+
+    .logo_mobile img {
+        width: 150px;
+        padding-top: 12px;
+    }
+
+    #burgermenu {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #menu_mobile {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        width: 100%;
+        text-decoration: none;
+        font-size: 18px;
+        display: none;
+    }
+
+    #menu_mobile a {
+        text-decoration: none;
+        display: block;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #533f32;
+        padding: 7px 2%;
+        transition: all 1s;
+    }
+
+    #menu_mobile a:hover{
+        text-decoration: underline;
+    }
+
+/*--Media max-width 768px - Intro afsnit--*/
+    .introtekst {
+        padding: 0px 5%;
+    }
+
+/*---Media max-width 768px - Forside----*/
+    #video {
+        margin-top: 0;
+    }
+
+    .background_container {
+        position: relative;
+        overflow: hidden;
+        background-image: url(img/forside/streger_forside_mobile.png);
+        background-size: 100%; 
+        background-repeat: repeat;
+        background-position: center;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .booking_knap {
+        font-size: 24px;
+        margin-top: 95px; 
+    }
+
+    .intro_afsnit {
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    .intro_tekst_forside {
+        text-align: center;
+        padding: 0;
+    }
+
+    .rund_billede_forside {
+        max-width: 260px;
+        padding: 5%;
+    }
+  
+    .min_karriere, .erhverv_privat {
+        padding: 10%;
+    }
+  
+    .anne_ida_forside, .brudepar_forside {
+        padding: 0;
+    }
+    
+    .anmeldelser_container{
+        height: 650px;
+    }
+
+    .tekst_anmeldelser{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .anmeldelser_fire_stjerner {
+        width: 30%;
+        height: auto;
+    }
+
+    .anmeldelser_fem_stjerner {
+        width: 35%;
+        height: auto;
+    }
+
+    .forside_prikker {
+        top: 90%;
+        left: 42%;
+    }
+
+    .naeste {
+        margin-right: 3%;
+    }
+    
+    .tilbage {
+        margin-left: 3%;
+    }
+
+    .tekst_anmeldelser {
+        font-size: 18px;
+    }
+
+    .anmeldelser_container {
+        padding: 15%;
+    }
+    
+/*--Media max-width 768px - Jeg tilbyder--*/
+    .grid_jegtilbyder_kategorier {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 30px;
+        grid-template-areas:
+            "jegtilbyder_haarstyling"
+            "jegtilbyder_styling"
+            "jegtilbyder_makeup";
+        margin: 70px 20% 110px 20%;
+        margin-bottom: 15%;
+    }
+
+    .container_jegtilbyder_virksomheder_private {
+        flex-direction: column; 
+        padding-top: 10%;
+    }
+
+    .overlappende_billede_virksomheder {
+        order: -1; /* viser rækkefølgen for elementer */
+        margin-bottom: -30px; 
+        left: 0px;
+    }
+
+    .jegtilbyder_infoboks_virksomheder, .jegtilbyder_swatch_pris_virksomheder {
+        margin: 0px 15%;
+    }
+
+    .overlappende_billede_private {
+        order: -1; 
+        margin-bottom: -30px;
+        left: 0px;
+    }
+
+    .jegtilbyder_infoboks_private {
+        margin: 0px 15%;
+    }
+
+    .jegtilbyder_pris_virksomheder {
+        margin-bottom: -20px;
+        margin-left: 50px;
+    }
+
+    .jegtilbyder_pris_private {
+        margin-bottom: -20px;
+        margin-left: -90px;
+    }
+
+    .jegtilbyder_tekst {
+        padding-top: 0;
+        font-size: 12pt;
+    }
+
+    .grid_jegtilbyder_produkter {  
+        background-image: url('img/jeg_tilbyder/jegtilbyder_baggrund_mobile.jpg');
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+        "jegtilbyder_makeupprodukter"
+        "jegtilbyder_haarprodukter"
+        "jegtilbyder_hudpleje";
+        padding: 10px 5px;
+        margin-top: 20%;
+    }
+
+    .jegtilbyder_streg {
+        background-size: 150%;
+        height: 800px;
+        top: 1480px;
+    }
+
+/*--Media max-width 768px - Portfolio--*/
+    /*--Media max-width 768px - Portfolio, række 1 --*/
+    .grid_portfolio_foerste {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-template-areas:
+          "ida_lyseroed"
+          "philine_yoga";
+    }
+
+    .ida_lyseroed { grid-area: ida_lyseroed; }
+      
+    .philine_yoga { grid-area: philine_yoga; }
+
+    /*--Media max-width 768px - Portfolio, række 2 --*/
+    .foer_efter_tekst {
+        top: 28%;
+        left: 51%;
+        transform: translate(-50%, 50%);
+        width: 80px;
+        height: 15px;
+        background-color: #c1a39e; /* Lyserød baggrundfarve på før/efter boksen */
+        padding: 5px;
+        padding-bottom: 9px;
+        font-size: 10px;
+        z-index: 1; /* Sørger for, at teksten ligger ovenpå billedet */
+    }
+
+    .foer_billede img, .efter_billede img {
+        width: 100%;
+        height: auto;
+    }
+    .grid_portfolio_anden {
+        max-height: 100%;
+    }
+    
+    /*--Media max-width 768px - Portfolio, række 3--*/
+    .grid_portfolio_tredje {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "yoga_bagfra"
+          "hvid_bh"
+          "kendte_personer";
+    }
+
+    /*--Media max-width 768px - Portfolio, række 4--*/
+    .grid_portfolio_fjerde {  
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "afro"
+          "philine_elizabeth"
+          "sort_toej";
+    }
+
+    /*--Media max-width 768px - Portfolio, række 5--*/
+    .grid_portfolio_femte {  
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "virksomheder"
+      "taet_paa";
+    }
+    
+    /*--Media max-width 768px - Portfolio, række 7--*/
+    .grid_portfolio_syvende {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "hestehale"
+          "haarklemme";
+    }
+
+/*--Media max-width 768px - Hvem er jeg--*/
+    .intro_hvemerjeg {
+        flex-direction: column;
+    }
+
+    .rund_billede_hvemerjeg {
+        padding-top: 25px;
+        max-width: 250px;
+    }
+
+    .intro_tekst_hvemerjeg {
+        padding-right: 0%;
+    }
+
+    .streg_hvemerjeg {
+        top: 1110px;
+        left: 0;
+    }
+  
+    .grid_hvemerjeg {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-auto-flow: row;
+        align-items: center;
+        grid-template-areas:
+            "som_person"
+            "i_et_team"
+            "kompetencer";
+    }
+
+    .overskrift_infographic h2 {
+        color: #ffffff;
+        background-image: url('img/hvem_er_jeg/hvemerjeg_swatch.png'); 
+        background-size: 370px;
+    }
+    
+    .infographic {  
+        display: grid;
+        background-image: url('img/hvem_er_jeg/blaastreg_hvemerjeg_mobile.png'); 
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        text-align: center;
+        margin-bottom: 15px;
+        margin-right: 4%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 0px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "design_skole ."
+          ". arbejde_designer"
+          "london ."
+          ". makeup_skole"
+          "cvr_grid ."
+          ". fotograf"
+          "haarkursus_1 ."
+          ". haarkursus_2";
+    }
+      
+    .design_skole { 
+        grid-area: design_skole;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -40px;
+        margin-left: -10px;
+    }
+    
+    .london { 
+        grid-area: london;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .cvr_grid { 
+        grid-area: cvr_grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: -50px;
+    }
+
+    .haarkursus_1 { 
+        grid-area: haarkursus_1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -100px;
+        margin-right: -10px;
+    }
+
+    .arbejde_designer { 
+        grid-area: arbejde_designer; 
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0;
+    }
+
+    .makeup_skole { 
+        grid-area: makeup_skole;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 50px;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .makeup_skole p {
+        width: 120px;
+    }
+
+    .fotograf { 
+        grid-area: fotograf;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-left: 100px;
+        margin-top: 30px;
+    }
+
+    .fotograf p {
+        width: 140px;
+    }
+    
+    .haarkursus_2 { 
+        grid-area: haarkursus_2;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: -110px;
+        margin-left: 30px;
+    }
+
+    /* ---Pop-up 2004-2006 - billede og kryds ---*/
+    #popup_2004_2006 img {
+        width: 95%; /*fylder nsæten hele skærmen i viden på mobile*/
+        margin-left: 2.5%;
+        position: absolute; /*placere pop-up absolute*/
+        top: 358%; /*placeres fra toppen*/
+    }
+
+    #kryds_2004_2006 {
+        width: 10%;
+        height: 10%;
+        position: absolute; /*placeres absolute*/
+        top: 358%; /*placeres fra toppen og ned*/
+        left: 85%; /*placeres fra venstre*/
+        z-index: 100; /*ligger oven på de andre elementer*/
+        
+    }
+
+    /* ---Pop-up 2007-2009 - billede og kryds---*/
+    #popup_2007_2009 img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 406%;
+    }
+
+    #kryds_2007_2009 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 406%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2010 cvr - billede og kryds---*/
+    #popup_2010_cvr img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 455%;
+    }
+
+    #kryds_2010_cvr {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 455%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2012 - billede og kryds---*/
+    #popup_2012 img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 495%;
+    }
+
+    #kryds_2012 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 495%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2006 - billede og kryds---*/
+    #popup_2006 img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 385%;
+    }
+
+    #kryds_2006 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 385%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2009-2010 - billede og kryds---*/
+    #popup_2009_2010 img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 430%;
+    }
+
+    #kryds_2009_2010 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 430%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2010 stock - billede og kryds---*/
+    #popup_2010_stock img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 475%;
+    }
+
+    #kryds_2010_stock {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 475%;
+        left: 85%;
+        z-index: 100;
+    }
+
+    /* ---Pop-up 2023 stock - billede og kryds---*/
+    #popup_2023 img {
+        width: 95%;
+        margin-left: 2.5%;
+        position: absolute;
+        top: 518%;
+    }
+
+    #kryds_2023 {
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        top: 518%;
+        left: 85%;
+        z-index: 100;
+    }
+
+/*--Media max-width 768px - Booking -*/
+    .grid_booking_kontakt {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "booking_some booking_some"
+            "booking_kontakt booking_kontakt";
+    }
+
+    .booking_streg_1 {
+        top: 380px;
+        left: 0;
+    }
+    
+    .booking_streg_2 {
+        top: 1075px;
+        left: 0;
+    }
+
+    form {
+        margin: 50px 10%;
+    }
+
+    .overskrift_kontakt {
+        margin-bottom: -20px;
+    }
+    
+    .booking_kontakt, .booking_some {
+        margin: 1px;
+    }
+ 
+    .grid_booking_kontakt {
+        margin: 50px;
+    }
+
+    .popup_booking {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*centrere popupvinduet*/
+        background-color: white;
+        padding: 20px;
+        border: 3px solid #ccc;
+        width: 80%;
+    }
+    
+    .popup_booking img {
+        max-width: 100%;
+        height: auto;
+    }
+
+ /*--Media max-width 768px - Footer--*/
+    .adresse_og_telefon {
+        flex-direction: column;
+    }
+}
+
+
+/* ---Media max-width 1000px - Alle sider ---*/
+/* ---Media max-width 1000px - Forside ---*/
+@media screen and (max-width: 1000px) {
+    .grid_forside{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "min_karriere"
+        "anne_ida_forside"
+        "erhverv_privat"
+        "brudepar_forside";
+    }
+
+/*--Media max-width 1000px - Hvem er jeg--*/
+    .grid_hvemerjeg {  
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: 30px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "som_person"
+        "i_et_team"
+        "kompetencer";
+    }
+}
